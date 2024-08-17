@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 48px;
+            transition: background-color 0.5s;
+        }
+
+        #section-a {
+            background-color: #3498db;
+        }
+
+        #section-b {
+            background-color: #e74c3c;
+        }
+
+        #section-c {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#section-a">Section A</a>
+        <a href="#section-b">Section B</a>
+        <a href="#section-c">Section C</a>
+    </nav>
+
+    <section id="section-a">
+        Section A
+    </section>
+
+    <section id="section-b">
+        Section B
+    </section>
+
+    <section id="section-c">
+        Section C
+    </section>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
