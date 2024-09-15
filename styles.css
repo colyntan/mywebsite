@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+.container{
+    height: 100vh;
+    width: 100vh;
+    background: linear-gradient(
+
+        45deg, #d2001a, #7462ff
+        
+        );
+        animation: rotation 20s linear infinite;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 48px;
+    z-index: 10;
+}
+
+#section-a {
+    background-color: rgba(10, 25, 47, 0.8); 
+}
+
+#section-b {
+    background-color: rgba(55, 10, 70, 0.8); /* Deep dark purple tint */
+}
+
+#section-c {
+    background-color: rgba(80, 10, 40, 0.8); /* Deep dark pink tint */
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: url('https://cdn.jsdelivr.net/gh/matteobruni/tsparticles@1.34.0/assets/media/particle-network-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.3;
+}
