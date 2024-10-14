@@ -1,0 +1,38 @@
+Colin's blueberry garden
+-Home
+-Portfolio
+
+-Works
+  -Current project ( Personal Assistant)
+      - Large databank on user pattern 
+        recognition and context memorization
+      - Importance ratio on user preference (For example: User prefers to have dessert only on Friday, or prefers certains vegetables over another if possible, or birthdays preferences over other (meaning moms birthday preparation as opposed to acquaintances birthday gift))
+      -Implementation? Bot? Prompter? How does it activate? How to keep it on standby without requiring vocal activation?
+
+
+  -Projects 
+      -  Expense calculator + (AI assistant)
+              - Helps assist purchase and              
+                financially plan 
+      - Fitness Tracker (Gym)
+              - Helps calculate progress (weights)
+              - Consistency with weekly progress 
+                and weight incrementatioms
+      - Two more?
+      - Playable games as projects? Turn based/Roguelike 
+
+
+  -Certifications?
+          -Google shit? Coursera?
+  -Fun Pit
+    -nonproject explorations such as html funsies
+
+
+
+Thesis/Papers
+- Research papers on DATA USAGE or utilisation of ai?
+
+Side Quests
+-Reading corner
+-Fashion apparel
+-Doodles and art (With chapters?) (story telling)
