@@ -8,9 +8,10 @@
     <style>
         /* Styles for capsule buttons */
         .capsule-button {
-            display: inline-block;
+            display: block;
+            width: 200px;
             padding: 10px 20px;
-            margin: 10px;
+            margin: 10px auto;
             font-size: 16px;
             color: #fff;
             background-color: #007bff;
@@ -28,34 +29,32 @@
     </style>
 </head>
 <body>
-    <!-- <div class = "container"> -->
-        <nav>
-            <a href="#section-a">Welcome</a>
-            <a href="#section-b">Projects</a>
-            <a href="#section-c">Experiences</a>
-        </nav>
+    <nav>
+        <a href="#section-a">Welcome</a>
+        <a href="#section-b">Projects</a>
+        <a href="#section-c">Experiences</a>
+    </nav>
 
-        <section id="section-a">
-            <div class="particles"></div>
-            Welcome to Colin's FunHouse
-        </section>
+    <section id="section-a">
+        <div class="particles"></div>
+        Welcome to Colin's FunHouse
+    </section>
 
-        <section id="section-b">
-            <div class="particles"></div>
-            <h2>My Projects</h2>
-            <div>
-                <a href="#" class="capsule-button">Current Projects</a>
-                <a href="#" class="capsule-button">Past Projects</a>
-            </div>
-        </section>
+    <section id="section-b">
+        <div class="particles"></div>
+        <h2>My Projects</h2>
+        <div>
+            <a href="receiptproject.html" class="capsule-button">Current Projects</a>
+            <a href="#" class="capsule-button">Past Projects</a>
+        </div>
+    </section>
 
-        <section id="section-c">
-            <div class="particles"></div>
-            My Experiences
-        </section>
+    <section id="section-c">
+        <div class="particles"></div>
+        My Experiences
+    </section>
 
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script src="main.js"></script>
-    <!-- </div> -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
