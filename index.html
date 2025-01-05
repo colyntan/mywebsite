@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colin's FunHouse</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles for capsule buttons */
+        .capsule-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .capsule-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <!-- <div class = "container"> -->
@@ -21,7 +42,11 @@
 
         <section id="section-b">
             <div class="particles"></div>
-            My Projects
+            <h2>My Projects</h2>
+            <div>
+                <a href="#" class="capsule-button">Current Projects</a>
+                <a href="#" class="capsule-button">Past Projects</a>
+            </div>
         </section>
 
         <section id="section-c">
