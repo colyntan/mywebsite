@@ -7,8 +7,8 @@
     <title>Receipt Project | Colin's Portfolio</title>
     <link rel="stylesheet" href="../../public/css/receipt-project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Tesseract.js for OCR -->
-    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.1.1/dist/tesseract.min.js"></script>
+    <!-- Application Scripts (using ES modules) -->
+    <script type="module" src="/src/features/receipts/index.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -90,43 +90,6 @@
         </div>
     </div>
 
-    <!-- Load our receipt processor -->
-    <script src="/public/js/receipt-processor.js"></script>
-    
-    <script>
-        // Handle navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add active class to current nav item
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelectorAll('.sidebar a').forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Handle file input click
-            document.getElementById('upload-receipt-link').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('receipt-upload').click();
-            });
-            
-            // Process another receipt
-            const processAnotherBtn = document.getElementById('process-another');
-            if (processAnotherBtn) {
-                processAnotherBtn.addEventListener('click', function() {
-                    window.location.reload();
-                });
-            }
-            
-            // Save receipt (placeholder functionality)
-            const saveReceiptBtn = document.getElementById('save-receipt');
-            if (saveReceiptBtn) {
-                saveReceiptBtn.addEventListener('click', function() {
-                    alert('Receipt saved successfully!');
-                    // In a real app, you would save to a database here
-                });
-            }
-        });
-    </script>
+    <!-- All JavaScript is now loaded via the module above -->
 </body>
 </html>
