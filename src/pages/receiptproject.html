@@ -3,56 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receipt Project</title>
-    <link rel="stylesheet" href="/public/css/styles.css">
-    <style>
-        body {
-            display: flex;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .sidebar {
-            width: 200px;
-            background-color: #333;
-            color: #fff;
-            height: 100vh;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .sidebar a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: #444;
-        }
-
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-    </style>
+    <meta name="description" content="Receipt Project - A comprehensive receipt management system">
+    <title>Receipt Project | Colin's Portfolio</title>
+    <link rel="stylesheet" href="../../public/css/receipt-project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Application Scripts (using ES modules) -->
+    <script type="module" src="/src/features/receipts/index.js"></script>
 </head>
 <body>
     <div class="sidebar">
-        <h3>Menu</h3>
-        <a href="#">Home</a>
-        <a href="#">Test1</a>
-        <a href="#">Test2</a>
-        <a href="#">Test3</a>
+        <h3>Receipt Manager</h3>
+        <a href="#" class="active">
+            <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="#">
+            <i class="fas fa-receipt"></i> All Receipts
+        </a>
+        <a href="#" id="upload-receipt-link">
+            <i class="fas fa-plus-circle"></i> Add New
+        </a>
+        <a href="#">
+            <i class="fas fa-chart-pie"></i> Analytics
+        </a>
+        <a href="#" style="margin-top: 30px;">
+            <i class="fas fa-cog"></i> Settings
+        </a>
+        <a href="/src/pages/index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
     </div>
 
     <div class="content">
-        <h1>Receipt Project</h1>
-        <p>Welcome to the Receipt Project page! Use the menu on the left to navigate.</p>
+        <div class="receipt-upload-container">
+            <h1>Upload Receipt</h1>
+            <p>Take a photo or upload an image of your receipt to extract the details automatically.</p>
+            
+            <div class="upload-section">
+                <div id="upload-area" class="upload-area">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop your receipt image here or</p>
+                    <form id="upload-form">
+                        <label for="receipt-upload" class="btn btn-primary">
+                            <i class="fas fa-folder-open"></i> Choose File
+                        </label>
+                        <input type="file" id="receipt-upload" accept="image/*" capture="camera" style="display: none;">
+                    </form>
+                    <p class="file-types">Supports: JPG, PNG, WEBP (Max 10MB)</p>
+                </div>
+                
+                <div id="loader" class="loader hidden">
+                    <div class="spinner"></div>
+                    <p>Processing your receipt...</p>
+                </div>
+                
+                <div id="results-section" class="results-section hidden">
+                    <div class="results-container">
+                        <div class="image-preview">
+                            <img id="receipt-image" src="#" alt="Receipt preview">
+                        </div>
+                        <div class="extracted-data-container">
+                            <h3>Extracted Information</h3>
+                            <div id="extracted-data" class="extracted-data"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button class="btn btn-secondary" id="save-receipt">
+                            <i class="fas fa-save"></i> Save Receipt
+                        </button>
+                        <button class="btn btn-outline" id="process-another">
+                            <i class="fas fa-redo"></i> Process Another
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="recent-receipts">
+            <h2>Recent Receipts</h2>
+            <div class="receipts-grid">
+                <div class="empty-state">
+                    <i class="fas fa-receipt"></i>
+                    <p>No receipts yet. Upload your first receipt to get started!</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- All JavaScript is now loaded via the module above -->
 </body>
 </html>
